@@ -1,9 +1,3 @@
-# -*- coding: utf-8 -*-
-"""
-Created on Tue Oct  15 00:23:57 2019
-@author: 
-"""
-
 import games.arkanoid.communication as comm
 from games.arkanoid.communication import ( \
     SceneInfo, GameInstruction, GameStatus, PlatformAction
@@ -66,17 +60,6 @@ print(x_test)
 y_knn=neigh.predict(x_test)
 
 acc=accuracy_score(y_knn, y_test)
-
-"""from sklearn.preprocessing import StandardScaler
-scaler=StandardScaler()
-scaler.fit(x_train)
-x_train_stdnorm=scaler.transform(x_train)
-neigh.fit(x_train_stdnorm, y_train)
-x_test_stdnorm=scaler.transform(x_test)
-yt=neigh.predict(x_test_stdnorm)
-acc=accuracy_score(yt, y_test)"""
-
-
 
 filename="svc_example.sav"
 pickle.dump(neigh, open(filename, 'wb'))
