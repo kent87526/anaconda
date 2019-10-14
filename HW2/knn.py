@@ -26,10 +26,8 @@ log = ['D:\\anao\\MLGame-master\\games\\arkanoid\\log\\2019-10-14_23-47-24.pickl
        'D:\\anao\\MLGame-master\\games\\arkanoid\\log\\2019-10-15_02-26-11.pickle',
        'D:\\anao\\MLGame-master\\games\\arkanoid\\log\\2019-10-15_02-27-36.pickle',
        ]
-#filenames = os.listdir(log)
 
-for filename in log:
-    #fileroutine = log + '\\' 
+for filename in log: 
     with open(filename,"rb") as f:
         data_list = pickle.load(f)
     for i in range(0,len(data_list)):
